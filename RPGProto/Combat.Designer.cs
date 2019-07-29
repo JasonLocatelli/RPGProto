@@ -70,14 +70,14 @@
             this.lbHPheros2 = new System.Windows.Forms.Label();
             this.lbTxtDialogue = new System.Windows.Forms.Label();
             this.dialogueFleche = new System.Windows.Forms.Label();
-            this.tlpEnnemis = new System.Windows.Forms.TableLayoutPanel();
-            this.pbEnnemi7 = new System.Windows.Forms.PictureBox();
-            this.pbEnnemi6 = new System.Windows.Forms.PictureBox();
-            this.pbEnnemi5 = new System.Windows.Forms.PictureBox();
-            this.pbEnnemi4 = new System.Windows.Forms.PictureBox();
-            this.pbEnnemi3 = new System.Windows.Forms.PictureBox();
-            this.pbEnnemi2 = new System.Windows.Forms.PictureBox();
-            this.pbEnnemi1 = new System.Windows.Forms.PictureBox();
+            this.tlpMonstres = new System.Windows.Forms.TableLayoutPanel();
+            this.pbMonstre7 = new System.Windows.Forms.PictureBox();
+            this.pbMonstre6 = new System.Windows.Forms.PictureBox();
+            this.pbMonstre5 = new System.Windows.Forms.PictureBox();
+            this.pbMonstre4 = new System.Windows.Forms.PictureBox();
+            this.pbMonstre3 = new System.Windows.Forms.PictureBox();
+            this.pbMonstre2 = new System.Windows.Forms.PictureBox();
+            this.pbMonstre1 = new System.Windows.Forms.PictureBox();
             this.timerCombat = new System.Windows.Forms.Timer(this.components);
             this.tpnActions = new System.Windows.Forms.TableLayoutPanel();
             this.lbTactique = new System.Windows.Forms.Label();
@@ -94,15 +94,15 @@
             this.lbDefense = new System.Windows.Forms.Label();
             this.lbSorts = new System.Windows.Forms.Label();
             this.lbAttaquer = new System.Windows.Forms.Label();
-            this.pnEnnemi = new System.Windows.Forms.Panel();
-            this.tpnEnnemi = new System.Windows.Forms.TableLayoutPanel();
-            this.lbEnnemi7 = new System.Windows.Forms.Label();
-            this.lbEnnemi6 = new System.Windows.Forms.Label();
-            this.lbEnnemi5 = new System.Windows.Forms.Label();
-            this.lbEnnemi4 = new System.Windows.Forms.Label();
-            this.lbEnnemi3 = new System.Windows.Forms.Label();
-            this.lbEnnemi1 = new System.Windows.Forms.Label();
-            this.lbEnnemi2 = new System.Windows.Forms.Label();
+            this.pnMonstre = new System.Windows.Forms.Panel();
+            this.tpnMonstre = new System.Windows.Forms.TableLayoutPanel();
+            this.lbMonstre7 = new System.Windows.Forms.Label();
+            this.lbMonstre6 = new System.Windows.Forms.Label();
+            this.lbMonstre5 = new System.Windows.Forms.Label();
+            this.lbMonstre4 = new System.Windows.Forms.Label();
+            this.lbMonstre3 = new System.Windows.Forms.Label();
+            this.lbMonstre1 = new System.Windows.Forms.Label();
+            this.lbMonstre2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayerCombat)).BeginInit();
             this.pnHeros1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHeros1)).BeginInit();
@@ -113,20 +113,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbHeros3)).BeginInit();
             this.pnHeros2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHeros2)).BeginInit();
-            this.tlpEnnemis.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnnemi7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnnemi6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnnemi5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnnemi4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnnemi3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnnemi2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnnemi1)).BeginInit();
+            this.tlpMonstres.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMonstre7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMonstre6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMonstre5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMonstre4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMonstre3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMonstre2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMonstre1)).BeginInit();
             this.tpnActions.SuspendLayout();
             this.pnActions.SuspendLayout();
             this.pnCombattre.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.pnEnnemi.SuspendLayout();
-            this.tpnEnnemi.SuspendLayout();
+            this.pnMonstre.SuspendLayout();
+            this.tpnMonstre.SuspendLayout();
             this.SuspendLayout();
             // 
             // axWindowsMediaPlayerCombat
@@ -647,116 +647,116 @@
             this.dialogueFleche.TabIndex = 5;
             this.dialogueFleche.Text = "▼";
             // 
-            // tlpEnnemis
+            // tlpMonstres
             // 
-            this.tlpEnnemis.BackColor = System.Drawing.Color.Transparent;
-            this.tlpEnnemis.ColumnCount = 7;
-            this.tlpEnnemis.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tlpEnnemis.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tlpEnnemis.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tlpEnnemis.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tlpEnnemis.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tlpEnnemis.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tlpEnnemis.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tlpEnnemis.Controls.Add(this.pbEnnemi7, 6, 0);
-            this.tlpEnnemis.Controls.Add(this.pbEnnemi6, 5, 0);
-            this.tlpEnnemis.Controls.Add(this.pbEnnemi5, 4, 0);
-            this.tlpEnnemis.Controls.Add(this.pbEnnemi4, 3, 0);
-            this.tlpEnnemis.Controls.Add(this.pbEnnemi3, 2, 0);
-            this.tlpEnnemis.Controls.Add(this.pbEnnemi2, 1, 0);
-            this.tlpEnnemis.Controls.Add(this.pbEnnemi1, 0, 0);
-            this.tlpEnnemis.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
-            this.tlpEnnemis.Location = new System.Drawing.Point(31, 301);
-            this.tlpEnnemis.Name = "tlpEnnemis";
-            this.tlpEnnemis.RowCount = 1;
-            this.tlpEnnemis.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpEnnemis.Size = new System.Drawing.Size(547, 134);
-            this.tlpEnnemis.TabIndex = 6;
+            this.tlpMonstres.BackColor = System.Drawing.Color.Transparent;
+            this.tlpMonstres.ColumnCount = 7;
+            this.tlpMonstres.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMonstres.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMonstres.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMonstres.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMonstres.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMonstres.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMonstres.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMonstres.Controls.Add(this.pbMonstre7, 6, 0);
+            this.tlpMonstres.Controls.Add(this.pbMonstre6, 5, 0);
+            this.tlpMonstres.Controls.Add(this.pbMonstre5, 4, 0);
+            this.tlpMonstres.Controls.Add(this.pbMonstre4, 3, 0);
+            this.tlpMonstres.Controls.Add(this.pbMonstre3, 2, 0);
+            this.tlpMonstres.Controls.Add(this.pbMonstre2, 1, 0);
+            this.tlpMonstres.Controls.Add(this.pbMonstre1, 0, 0);
+            this.tlpMonstres.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
+            this.tlpMonstres.Location = new System.Drawing.Point(31, 301);
+            this.tlpMonstres.Name = "tlpMonstres";
+            this.tlpMonstres.RowCount = 1;
+            this.tlpMonstres.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpMonstres.Size = new System.Drawing.Size(547, 134);
+            this.tlpMonstres.TabIndex = 6;
             // 
-            // pbEnnemi7
+            // pbMonstre7
             // 
-            this.pbEnnemi7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbEnnemi7.Image = global::RPGProto.Properties.Resources.orc1;
-            this.pbEnnemi7.Location = new System.Drawing.Point(471, 3);
-            this.pbEnnemi7.Name = "pbEnnemi7";
-            this.pbEnnemi7.Size = new System.Drawing.Size(72, 128);
-            this.pbEnnemi7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEnnemi7.TabIndex = 11;
-            this.pbEnnemi7.TabStop = false;
-            this.pbEnnemi7.Visible = false;
+            this.pbMonstre7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbMonstre7.Image = global::RPGProto.Properties.Resources.orc1;
+            this.pbMonstre7.Location = new System.Drawing.Point(471, 3);
+            this.pbMonstre7.Name = "pbMonstre7";
+            this.pbMonstre7.Size = new System.Drawing.Size(72, 128);
+            this.pbMonstre7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMonstre7.TabIndex = 11;
+            this.pbMonstre7.TabStop = false;
+            this.pbMonstre7.Visible = false;
             // 
-            // pbEnnemi6
+            // pbMonstre6
             // 
-            this.pbEnnemi6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbEnnemi6.Image = global::RPGProto.Properties.Resources.orc1;
-            this.pbEnnemi6.Location = new System.Drawing.Point(393, 3);
-            this.pbEnnemi6.Name = "pbEnnemi6";
-            this.pbEnnemi6.Size = new System.Drawing.Size(72, 128);
-            this.pbEnnemi6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEnnemi6.TabIndex = 11;
-            this.pbEnnemi6.TabStop = false;
-            this.pbEnnemi6.Visible = false;
+            this.pbMonstre6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbMonstre6.Image = global::RPGProto.Properties.Resources.orc1;
+            this.pbMonstre6.Location = new System.Drawing.Point(393, 3);
+            this.pbMonstre6.Name = "pbMonstre6";
+            this.pbMonstre6.Size = new System.Drawing.Size(72, 128);
+            this.pbMonstre6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMonstre6.TabIndex = 11;
+            this.pbMonstre6.TabStop = false;
+            this.pbMonstre6.Visible = false;
             // 
-            // pbEnnemi5
+            // pbMonstre5
             // 
-            this.pbEnnemi5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbEnnemi5.Image = global::RPGProto.Properties.Resources.orc1;
-            this.pbEnnemi5.Location = new System.Drawing.Point(315, 3);
-            this.pbEnnemi5.Name = "pbEnnemi5";
-            this.pbEnnemi5.Size = new System.Drawing.Size(72, 128);
-            this.pbEnnemi5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEnnemi5.TabIndex = 11;
-            this.pbEnnemi5.TabStop = false;
-            this.pbEnnemi5.Visible = false;
+            this.pbMonstre5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbMonstre5.Image = global::RPGProto.Properties.Resources.orc1;
+            this.pbMonstre5.Location = new System.Drawing.Point(315, 3);
+            this.pbMonstre5.Name = "pbMonstre5";
+            this.pbMonstre5.Size = new System.Drawing.Size(72, 128);
+            this.pbMonstre5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMonstre5.TabIndex = 11;
+            this.pbMonstre5.TabStop = false;
+            this.pbMonstre5.Visible = false;
             // 
-            // pbEnnemi4
+            // pbMonstre4
             // 
-            this.pbEnnemi4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbEnnemi4.Image = global::RPGProto.Properties.Resources.orc1;
-            this.pbEnnemi4.Location = new System.Drawing.Point(237, 3);
-            this.pbEnnemi4.Name = "pbEnnemi4";
-            this.pbEnnemi4.Size = new System.Drawing.Size(72, 128);
-            this.pbEnnemi4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEnnemi4.TabIndex = 11;
-            this.pbEnnemi4.TabStop = false;
-            this.pbEnnemi4.Visible = false;
+            this.pbMonstre4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbMonstre4.Image = global::RPGProto.Properties.Resources.orc1;
+            this.pbMonstre4.Location = new System.Drawing.Point(237, 3);
+            this.pbMonstre4.Name = "pbMonstre4";
+            this.pbMonstre4.Size = new System.Drawing.Size(72, 128);
+            this.pbMonstre4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMonstre4.TabIndex = 11;
+            this.pbMonstre4.TabStop = false;
+            this.pbMonstre4.Visible = false;
             // 
-            // pbEnnemi3
+            // pbMonstre3
             // 
-            this.pbEnnemi3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbEnnemi3.Image = global::RPGProto.Properties.Resources.orc1;
-            this.pbEnnemi3.Location = new System.Drawing.Point(159, 3);
-            this.pbEnnemi3.Name = "pbEnnemi3";
-            this.pbEnnemi3.Size = new System.Drawing.Size(72, 128);
-            this.pbEnnemi3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEnnemi3.TabIndex = 11;
-            this.pbEnnemi3.TabStop = false;
-            this.pbEnnemi3.Visible = false;
+            this.pbMonstre3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbMonstre3.Image = global::RPGProto.Properties.Resources.orc1;
+            this.pbMonstre3.Location = new System.Drawing.Point(159, 3);
+            this.pbMonstre3.Name = "pbMonstre3";
+            this.pbMonstre3.Size = new System.Drawing.Size(72, 128);
+            this.pbMonstre3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMonstre3.TabIndex = 11;
+            this.pbMonstre3.TabStop = false;
+            this.pbMonstre3.Visible = false;
             // 
-            // pbEnnemi2
+            // pbMonstre2
             // 
-            this.pbEnnemi2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbEnnemi2.Image = global::RPGProto.Properties.Resources.orc1;
-            this.pbEnnemi2.Location = new System.Drawing.Point(81, 3);
-            this.pbEnnemi2.Name = "pbEnnemi2";
-            this.pbEnnemi2.Size = new System.Drawing.Size(72, 128);
-            this.pbEnnemi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEnnemi2.TabIndex = 11;
-            this.pbEnnemi2.TabStop = false;
-            this.pbEnnemi2.Visible = false;
+            this.pbMonstre2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbMonstre2.Image = global::RPGProto.Properties.Resources.orc1;
+            this.pbMonstre2.Location = new System.Drawing.Point(81, 3);
+            this.pbMonstre2.Name = "pbMonstre2";
+            this.pbMonstre2.Size = new System.Drawing.Size(72, 128);
+            this.pbMonstre2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMonstre2.TabIndex = 11;
+            this.pbMonstre2.TabStop = false;
+            this.pbMonstre2.Visible = false;
             // 
-            // pbEnnemi1
+            // pbMonstre1
             // 
-            this.pbEnnemi1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbEnnemi1.BackColor = System.Drawing.Color.Transparent;
-            this.pbEnnemi1.Image = global::RPGProto.Properties.Resources.orc1;
-            this.pbEnnemi1.Location = new System.Drawing.Point(3, 3);
-            this.pbEnnemi1.Name = "pbEnnemi1";
-            this.pbEnnemi1.Size = new System.Drawing.Size(72, 128);
-            this.pbEnnemi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEnnemi1.TabIndex = 0;
-            this.pbEnnemi1.TabStop = false;
-            this.pbEnnemi1.Visible = false;
+            this.pbMonstre1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbMonstre1.BackColor = System.Drawing.Color.Transparent;
+            this.pbMonstre1.Image = global::RPGProto.Properties.Resources.orc1;
+            this.pbMonstre1.Location = new System.Drawing.Point(3, 3);
+            this.pbMonstre1.Name = "pbMonstre1";
+            this.pbMonstre1.Size = new System.Drawing.Size(72, 128);
+            this.pbMonstre1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMonstre1.TabIndex = 0;
+            this.pbMonstre1.TabStop = false;
+            this.pbMonstre1.Visible = false;
             // 
             // timerCombat
             // 
@@ -970,136 +970,136 @@
             this.lbAttaquer.Text = "Attaquer";
             this.lbAttaquer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pnEnnemi
+            // pnMonstre
             // 
-            this.pnEnnemi.BackColor = System.Drawing.Color.Black;
-            this.pnEnnemi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnEnnemi.Controls.Add(this.tpnEnnemi);
-            this.pnEnnemi.Location = new System.Drawing.Point(379, 441);
-            this.pnEnnemi.Name = "pnEnnemi";
-            this.pnEnnemi.Size = new System.Drawing.Size(208, 152);
-            this.pnEnnemi.TabIndex = 10;
-            this.pnEnnemi.Visible = false;
+            this.pnMonstre.BackColor = System.Drawing.Color.Black;
+            this.pnMonstre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnMonstre.Controls.Add(this.tpnMonstre);
+            this.pnMonstre.Location = new System.Drawing.Point(379, 441);
+            this.pnMonstre.Name = "pnMonstre";
+            this.pnMonstre.Size = new System.Drawing.Size(208, 152);
+            this.pnMonstre.TabIndex = 10;
+            this.pnMonstre.Visible = false;
             // 
-            // tpnEnnemi
+            // tpnMonstre
             // 
-            this.tpnEnnemi.BackColor = System.Drawing.Color.Black;
-            this.tpnEnnemi.ColumnCount = 1;
-            this.tpnEnnemi.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tpnEnnemi.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tpnEnnemi.Controls.Add(this.lbEnnemi7, 0, 6);
-            this.tpnEnnemi.Controls.Add(this.lbEnnemi6, 0, 5);
-            this.tpnEnnemi.Controls.Add(this.lbEnnemi5, 0, 4);
-            this.tpnEnnemi.Controls.Add(this.lbEnnemi4, 0, 3);
-            this.tpnEnnemi.Controls.Add(this.lbEnnemi3, 0, 2);
-            this.tpnEnnemi.Controls.Add(this.lbEnnemi1, 0, 0);
-            this.tpnEnnemi.Controls.Add(this.lbEnnemi2, 0, 1);
-            this.tpnEnnemi.ForeColor = System.Drawing.Color.White;
-            this.tpnEnnemi.Location = new System.Drawing.Point(3, 8);
-            this.tpnEnnemi.Name = "tpnEnnemi";
-            this.tpnEnnemi.RowCount = 7;
-            this.tpnEnnemi.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tpnEnnemi.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tpnEnnemi.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tpnEnnemi.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tpnEnnemi.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tpnEnnemi.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tpnEnnemi.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tpnEnnemi.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tpnEnnemi.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tpnEnnemi.Size = new System.Drawing.Size(200, 134);
-            this.tpnEnnemi.TabIndex = 7;
+            this.tpnMonstre.BackColor = System.Drawing.Color.Black;
+            this.tpnMonstre.ColumnCount = 1;
+            this.tpnMonstre.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tpnMonstre.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tpnMonstre.Controls.Add(this.lbMonstre7, 0, 6);
+            this.tpnMonstre.Controls.Add(this.lbMonstre6, 0, 5);
+            this.tpnMonstre.Controls.Add(this.lbMonstre5, 0, 4);
+            this.tpnMonstre.Controls.Add(this.lbMonstre4, 0, 3);
+            this.tpnMonstre.Controls.Add(this.lbMonstre3, 0, 2);
+            this.tpnMonstre.Controls.Add(this.lbMonstre1, 0, 0);
+            this.tpnMonstre.Controls.Add(this.lbMonstre2, 0, 1);
+            this.tpnMonstre.ForeColor = System.Drawing.Color.White;
+            this.tpnMonstre.Location = new System.Drawing.Point(3, 8);
+            this.tpnMonstre.Name = "tpnMonstre";
+            this.tpnMonstre.RowCount = 7;
+            this.tpnMonstre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tpnMonstre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tpnMonstre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tpnMonstre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tpnMonstre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tpnMonstre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tpnMonstre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tpnMonstre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tpnMonstre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tpnMonstre.Size = new System.Drawing.Size(200, 134);
+            this.tpnMonstre.TabIndex = 7;
             // 
-            // lbEnnemi7
+            // lbMonstre7
             // 
-            this.lbEnnemi7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbEnnemi7.AutoSize = true;
-            this.lbEnnemi7.BackColor = System.Drawing.Color.Transparent;
-            this.lbEnnemi7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEnnemi7.Location = new System.Drawing.Point(3, 115);
-            this.lbEnnemi7.Name = "lbEnnemi7";
-            this.lbEnnemi7.Size = new System.Drawing.Size(63, 17);
-            this.lbEnnemi7.TabIndex = 15;
-            this.lbEnnemi7.Text = "Ennemi7";
-            this.lbEnnemi7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbMonstre7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbMonstre7.AutoSize = true;
+            this.lbMonstre7.BackColor = System.Drawing.Color.Transparent;
+            this.lbMonstre7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMonstre7.Location = new System.Drawing.Point(3, 115);
+            this.lbMonstre7.Name = "lbMonstre7";
+            this.lbMonstre7.Size = new System.Drawing.Size(63, 17);
+            this.lbMonstre7.TabIndex = 15;
+            this.lbMonstre7.Text = "Monstre7";
+            this.lbMonstre7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbEnnemi6
+            // lbMonstre6
             // 
-            this.lbEnnemi6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbEnnemi6.AutoSize = true;
-            this.lbEnnemi6.BackColor = System.Drawing.Color.Transparent;
-            this.lbEnnemi6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEnnemi6.Location = new System.Drawing.Point(3, 95);
-            this.lbEnnemi6.Name = "lbEnnemi6";
-            this.lbEnnemi6.Size = new System.Drawing.Size(63, 17);
-            this.lbEnnemi6.TabIndex = 14;
-            this.lbEnnemi6.Text = "Ennemi6";
-            this.lbEnnemi6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbMonstre6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbMonstre6.AutoSize = true;
+            this.lbMonstre6.BackColor = System.Drawing.Color.Transparent;
+            this.lbMonstre6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMonstre6.Location = new System.Drawing.Point(3, 95);
+            this.lbMonstre6.Name = "lbMonstre6";
+            this.lbMonstre6.Size = new System.Drawing.Size(63, 17);
+            this.lbMonstre6.TabIndex = 14;
+            this.lbMonstre6.Text = "Monstre6";
+            this.lbMonstre6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbEnnemi5
+            // lbMonstre5
             // 
-            this.lbEnnemi5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbEnnemi5.AutoSize = true;
-            this.lbEnnemi5.BackColor = System.Drawing.Color.Transparent;
-            this.lbEnnemi5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEnnemi5.Location = new System.Drawing.Point(3, 75);
-            this.lbEnnemi5.Name = "lbEnnemi5";
-            this.lbEnnemi5.Size = new System.Drawing.Size(63, 17);
-            this.lbEnnemi5.TabIndex = 13;
-            this.lbEnnemi5.Text = "Ennemi5";
-            this.lbEnnemi5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbMonstre5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbMonstre5.AutoSize = true;
+            this.lbMonstre5.BackColor = System.Drawing.Color.Transparent;
+            this.lbMonstre5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMonstre5.Location = new System.Drawing.Point(3, 75);
+            this.lbMonstre5.Name = "lbMonstre5";
+            this.lbMonstre5.Size = new System.Drawing.Size(63, 17);
+            this.lbMonstre5.TabIndex = 13;
+            this.lbMonstre5.Text = "Monstre5";
+            this.lbMonstre5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbEnnemi4
+            // lbMonstre4
             // 
-            this.lbEnnemi4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbEnnemi4.AutoSize = true;
-            this.lbEnnemi4.BackColor = System.Drawing.Color.Transparent;
-            this.lbEnnemi4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEnnemi4.Location = new System.Drawing.Point(3, 55);
-            this.lbEnnemi4.Name = "lbEnnemi4";
-            this.lbEnnemi4.Size = new System.Drawing.Size(63, 17);
-            this.lbEnnemi4.TabIndex = 11;
-            this.lbEnnemi4.Text = "Ennemi4";
-            this.lbEnnemi4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbMonstre4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbMonstre4.AutoSize = true;
+            this.lbMonstre4.BackColor = System.Drawing.Color.Transparent;
+            this.lbMonstre4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMonstre4.Location = new System.Drawing.Point(3, 55);
+            this.lbMonstre4.Name = "lbMonstre4";
+            this.lbMonstre4.Size = new System.Drawing.Size(63, 17);
+            this.lbMonstre4.TabIndex = 11;
+            this.lbMonstre4.Text = "Monstre4";
+            this.lbMonstre4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbEnnemi3
+            // lbMonstre3
             // 
-            this.lbEnnemi3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbEnnemi3.AutoSize = true;
-            this.lbEnnemi3.BackColor = System.Drawing.Color.Transparent;
-            this.lbEnnemi3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEnnemi3.Location = new System.Drawing.Point(3, 35);
-            this.lbEnnemi3.Name = "lbEnnemi3";
-            this.lbEnnemi3.Size = new System.Drawing.Size(63, 17);
-            this.lbEnnemi3.TabIndex = 11;
-            this.lbEnnemi3.Text = "Ennemi3";
-            this.lbEnnemi3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbMonstre3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbMonstre3.AutoSize = true;
+            this.lbMonstre3.BackColor = System.Drawing.Color.Transparent;
+            this.lbMonstre3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMonstre3.Location = new System.Drawing.Point(3, 35);
+            this.lbMonstre3.Name = "lbMonstre3";
+            this.lbMonstre3.Size = new System.Drawing.Size(63, 17);
+            this.lbMonstre3.TabIndex = 11;
+            this.lbMonstre3.Text = "Monstre3";
+            this.lbMonstre3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbEnnemi1
+            // lbMonstre1
             // 
-            this.lbEnnemi1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbEnnemi1.AutoSize = true;
-            this.lbEnnemi1.BackColor = System.Drawing.Color.Transparent;
-            this.lbEnnemi1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEnnemi1.Location = new System.Drawing.Point(3, 0);
-            this.lbEnnemi1.Name = "lbEnnemi1";
-            this.lbEnnemi1.Size = new System.Drawing.Size(63, 17);
-            this.lbEnnemi1.TabIndex = 12;
-            this.lbEnnemi1.Text = "Ennemi1";
-            this.lbEnnemi1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbMonstre1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbMonstre1.AutoSize = true;
+            this.lbMonstre1.BackColor = System.Drawing.Color.Transparent;
+            this.lbMonstre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMonstre1.Location = new System.Drawing.Point(3, 0);
+            this.lbMonstre1.Name = "lbMonstre1";
+            this.lbMonstre1.Size = new System.Drawing.Size(63, 17);
+            this.lbMonstre1.TabIndex = 12;
+            this.lbMonstre1.Text = "Monstre1";
+            this.lbMonstre1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbEnnemi2
+            // lbMonstre2
             // 
-            this.lbEnnemi2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbEnnemi2.AutoSize = true;
-            this.lbEnnemi2.BackColor = System.Drawing.Color.Transparent;
-            this.lbEnnemi2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEnnemi2.Location = new System.Drawing.Point(3, 17);
-            this.lbEnnemi2.Name = "lbEnnemi2";
-            this.lbEnnemi2.Size = new System.Drawing.Size(63, 17);
-            this.lbEnnemi2.TabIndex = 0;
-            this.lbEnnemi2.Text = "Ennemi2";
-            this.lbEnnemi2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbMonstre2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbMonstre2.AutoSize = true;
+            this.lbMonstre2.BackColor = System.Drawing.Color.Transparent;
+            this.lbMonstre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMonstre2.Location = new System.Drawing.Point(3, 17);
+            this.lbMonstre2.Name = "lbMonstre2";
+            this.lbMonstre2.Size = new System.Drawing.Size(63, 17);
+            this.lbMonstre2.TabIndex = 0;
+            this.lbMonstre2.Text = "Monstre2";
+            this.lbMonstre2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Combat
             // 
@@ -1107,10 +1107,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(612, 612);
-            this.Controls.Add(this.pnEnnemi);
+            this.Controls.Add(this.pnMonstre);
             this.Controls.Add(this.pnCombattre);
             this.Controls.Add(this.pnActions);
-            this.Controls.Add(this.tlpEnnemis);
+            this.Controls.Add(this.tlpMonstres);
             this.Controls.Add(this.dialogueFleche);
             this.Controls.Add(this.lbTxtDialogue);
             this.Controls.Add(this.tlpHeros);
@@ -1135,23 +1135,23 @@
             this.pnHeros2.ResumeLayout(false);
             this.pnHeros2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHeros2)).EndInit();
-            this.tlpEnnemis.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnnemi7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnnemi6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnnemi5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnnemi4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnnemi3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnnemi2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnnemi1)).EndInit();
+            this.tlpMonstres.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbMonstre7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMonstre6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMonstre5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMonstre4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMonstre3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMonstre2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMonstre1)).EndInit();
             this.tpnActions.ResumeLayout(false);
             this.tpnActions.PerformLayout();
             this.pnActions.ResumeLayout(false);
             this.pnCombattre.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.pnEnnemi.ResumeLayout(false);
-            this.tpnEnnemi.ResumeLayout(false);
-            this.tpnEnnemi.PerformLayout();
+            this.pnMonstre.ResumeLayout(false);
+            this.tpnMonstre.ResumeLayout(false);
+            this.tpnMonstre.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1199,8 +1199,8 @@
         private System.Windows.Forms.Label lbHPheros2;
         private System.Windows.Forms.Label lbTxtDialogue;
         private System.Windows.Forms.Label dialogueFleche;
-        public System.Windows.Forms.TableLayoutPanel tlpEnnemis;
-        public System.Windows.Forms.PictureBox pbEnnemi1;
+        public System.Windows.Forms.TableLayoutPanel tlpMonstres;
+        public System.Windows.Forms.PictureBox pbMonstre1;
         private System.Windows.Forms.Timer timerCombat;
         private System.Windows.Forms.TableLayoutPanel tpnActions;
         private System.Windows.Forms.Label lbTactique;
@@ -1217,20 +1217,20 @@
         private System.Windows.Forms.Label lbTension;
         private System.Windows.Forms.Label lbObjets;
         private System.Windows.Forms.Label lbAptitudes;
-        private System.Windows.Forms.Panel pnEnnemi;
-        private System.Windows.Forms.TableLayoutPanel tpnEnnemi;
-        private System.Windows.Forms.Label lbEnnemi2;
-        private System.Windows.Forms.Label lbEnnemi7;
-        private System.Windows.Forms.Label lbEnnemi6;
-        private System.Windows.Forms.Label lbEnnemi5;
-        private System.Windows.Forms.Label lbEnnemi4;
-        private System.Windows.Forms.Label lbEnnemi3;
-        private System.Windows.Forms.Label lbEnnemi1;
-        public System.Windows.Forms.PictureBox pbEnnemi7;
-        public System.Windows.Forms.PictureBox pbEnnemi6;
-        public System.Windows.Forms.PictureBox pbEnnemi5;
-        public System.Windows.Forms.PictureBox pbEnnemi4;
-        public System.Windows.Forms.PictureBox pbEnnemi3;
-        public System.Windows.Forms.PictureBox pbEnnemi2;
+        private System.Windows.Forms.Panel pnMonstre;
+        private System.Windows.Forms.TableLayoutPanel tpnMonstre;
+        private System.Windows.Forms.Label lbMonstre2;
+        private System.Windows.Forms.Label lbMonstre7;
+        private System.Windows.Forms.Label lbMonstre6;
+        private System.Windows.Forms.Label lbMonstre5;
+        private System.Windows.Forms.Label lbMonstre4;
+        private System.Windows.Forms.Label lbMonstre3;
+        private System.Windows.Forms.Label lbMonstre1;
+        public System.Windows.Forms.PictureBox pbMonstre7;
+        public System.Windows.Forms.PictureBox pbMonstre6;
+        public System.Windows.Forms.PictureBox pbMonstre5;
+        public System.Windows.Forms.PictureBox pbMonstre4;
+        public System.Windows.Forms.PictureBox pbMonstre3;
+        public System.Windows.Forms.PictureBox pbMonstre2;
     }
 }

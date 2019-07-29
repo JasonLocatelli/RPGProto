@@ -15,7 +15,6 @@ namespace RPGProto
     {
         // Nombre aléatoire
         Random rnd = new Random();
-
         // Chemin dossier
         string str_directory;
         string parent;
@@ -27,10 +26,11 @@ namespace RPGProto
         int compteurCara;
 
         List<Heros> listeHeros = new List<Heros>();
-        List<Ennemi> listeEnnemis = new List<Ennemi>();
-        List<Label> listeLabelEnnemi = new List<Label>();
-        List<string> listeNomEnnemis = new List<string>();
-        List<PictureBox> listePictureBoxEnnemi = new List<PictureBox>();
+        List<Heros> listeEquipe = new List<Heros>();
+        List<Monstre> listeMonstres = new List<Monstre>();
+        List<Label> listeLabelMonstre = new List<Label>();
+        List<string> listeNomMonstres = new List<string>();
+        List<PictureBox> listePictureBoxMonstre = new List<PictureBox>();
         List<Panel> listePanelHeros = new List<Panel>();
         List<char> listeLettres = new List<char>();
         List<char> cara = new List<char>();
@@ -52,7 +52,7 @@ namespace RPGProto
 
         private bool selectionner = false;
         int compteur;
-        public Combat(int zone,Joueur joueur, List<Heros> listeHeros, List<Ennemi> listeEnnemis)
+        public Combat(int zone,Joueur joueur, List<Heros> listeHeros, List<Monstre> listeMonstres)
         {
             InitializeComponent();
 
@@ -68,7 +68,7 @@ namespace RPGProto
             
             this.joueur = joueur;
             this.listeHeros = listeHeros;
-            this.listeEnnemis = listeEnnemis;
+            this.listeMonstres = listeMonstres;
             str_directory = Environment.CurrentDirectory.ToString();
             parent = System.IO.Directory.GetParent(str_directory).FullName;
             this.axWindowsMediaPlayerCombat.settings.playCount = 1000;
@@ -79,64 +79,64 @@ namespace RPGProto
             listePanelHeros.Add(pnHeros3);
             listePanelHeros.Add(pnHeros4);
 
-            listePictureBoxEnnemi.Add(pbEnnemi1);
-            listePictureBoxEnnemi.Add(pbEnnemi2);
-            listePictureBoxEnnemi.Add(pbEnnemi3);
-            listePictureBoxEnnemi.Add(pbEnnemi4);
-            listePictureBoxEnnemi.Add(pbEnnemi5);
-            listePictureBoxEnnemi.Add(pbEnnemi6);
-            listePictureBoxEnnemi.Add(pbEnnemi7);
+            listePictureBoxMonstre.Add(pbMonstre1);
+            listePictureBoxMonstre.Add(pbMonstre2);
+            listePictureBoxMonstre.Add(pbMonstre3);
+            listePictureBoxMonstre.Add(pbMonstre4);
+            listePictureBoxMonstre.Add(pbMonstre5);
+            listePictureBoxMonstre.Add(pbMonstre6);
+            listePictureBoxMonstre.Add(pbMonstre7);
 
-            lbEnnemi1.Text = "";
-            lbEnnemi2.Text = "";
-            lbEnnemi3.Text = "";
-            lbEnnemi4.Text = "";
-            lbEnnemi5.Text = "";
-            lbEnnemi6.Text = "";
-            lbEnnemi7.Text = "";
+            lbMonstre1.Text = "";
+            lbMonstre2.Text = "";
+            lbMonstre3.Text = "";
+            lbMonstre4.Text = "";
+            lbMonstre5.Text = "";
+            lbMonstre6.Text = "";
+            lbMonstre7.Text = "";
 
-            listeLabelEnnemi.Add(lbEnnemi1);
-            listeLabelEnnemi.Add(lbEnnemi2);
-            listeLabelEnnemi.Add(lbEnnemi3);
-            listeLabelEnnemi.Add(lbEnnemi4);
-            listeLabelEnnemi.Add(lbEnnemi5);
-            listeLabelEnnemi.Add(lbEnnemi6);
-            listeLabelEnnemi.Add(lbEnnemi7);
+            listeLabelMonstre.Add(lbMonstre1);
+            listeLabelMonstre.Add(lbMonstre2);
+            listeLabelMonstre.Add(lbMonstre3);
+            listeLabelMonstre.Add(lbMonstre4);
+            listeLabelMonstre.Add(lbMonstre5);
+            listeLabelMonstre.Add(lbMonstre6);
+            listeLabelMonstre.Add(lbMonstre7);
 
-            // Mise en place des lettres si il y a plusieurs ennemis
+            // Mise en place des lettres si il y a plusieurs Monstres
             listeLettres = new List<char>() {'A','B','C','D','E','F','G'};
-            int nbEnnemisTrouvee = 0;
+            int nbMonstresTrouvee = 0;
             string nomInitial = "";
             
-            for (int i = 0; i < listeEnnemis.Count; i++)
+            for (int i = 0; i < listeMonstres.Count; i++)
             {
-                nomInitial = listeEnnemis[i].Nom;
-                for(int y = 0; y < listeEnnemis.Count; y++)
+                nomInitial = listeMonstres[i].Nom;
+                for(int y = 0; y < listeMonstres.Count; y++)
                 {
-                    if(nomInitial == listeEnnemis[y].Nom)
+                    if(nomInitial == listeMonstres[y].Nom)
                     {
-                        nbEnnemisTrouvee++;
+                        nbMonstresTrouvee++;
                     }
                 }
-                Console.WriteLine("Il y a : " + nbEnnemisTrouvee + " " + nomInitial);
+                Console.WriteLine("Il y a : " + nbMonstresTrouvee + " " + nomInitial);
                 int compteur = 0;
-                for(int y=0; y < listeEnnemis.Count; y++)
+                for(int y=0; y < listeMonstres.Count; y++)
                 {
-                    if (nomInitial == listeEnnemis[y].Nom && nbEnnemisTrouvee > 1)
+                    if (nomInitial == listeMonstres[y].Nom && nbMonstresTrouvee > 1)
                     {
-                        listeEnnemis[y].Nom += " " + listeLettres[compteur];
+                        listeMonstres[y].Nom += " " + listeLettres[compteur];
                         compteur++;
                     }
                 }
-                nbEnnemisTrouvee = 0;
+                nbMonstresTrouvee = 0;
             }
 
 
             // Arrière plan combat
             this.BackgroundImage = Image.FromFile(parent + @"\Sprites\Combat\foret1.png");
 
-            for(int i=0; i < listeEnnemis.Count; i++) {
-                listePictureBoxEnnemi[i].Visible = true;
+            for(int i=0; i < listeMonstres.Count; i++) {
+                listePictureBoxMonstre[i].Visible = true;
             }
 
             foreach (Heros unHero in listeHeros)
@@ -168,7 +168,7 @@ namespace RPGProto
             joueur.SonTour = true;
             
            
-            //tlpEnnemis.Controls.Add(pbEnnemi1, rnd.Next(tlpEnnemis.ColumnCount), 0);
+            //tlpMonstres.Controls.Add(pbMonstre1, rnd.Next(tlpMonstres.ColumnCount), 0);
 
             if (listeHeros.Count == 0)
             {
@@ -187,16 +187,16 @@ namespace RPGProto
                 pnHeros4.Visible = false;
             }
             
-            foreach (Ennemi unEnnemi in listeEnnemis)
+            foreach (Monstre unMonstre in listeMonstres)
             {
                 
-                tlpEnnemis.Controls.Add(pbEnnemi1, rnd.Next(tlpEnnemis.ColumnCount), 0);
-                foreach (Label unLabelEnnemi in listeLabelEnnemi)
+                tlpMonstres.Controls.Add(pbMonstre1, rnd.Next(tlpMonstres.ColumnCount), 0);
+                foreach (Label unLabelMonstre in listeLabelMonstre)
                 {
-                    unLabelEnnemi.Text = unEnnemi.Nom;
+                    unLabelMonstre.Text = unMonstre.Nom;
                 }
-                postText += unEnnemi.Nom + " apparaît ! \n";
-                //lbTxtCombat.Text += unEnnemi.Nom+" apparaît ! \n";
+                postText += unMonstre.Nom + " apparaît ! \n";
+                //lbTxtCombat.Text += unMonstre.Nom+" apparaît ! \n";
             }
             compteurCara = 0;
             cara = new List<char>(postText.ToCharArray());
@@ -406,94 +406,94 @@ namespace RPGProto
                 // Menu1 selection
                 if (activeSelectMenu3 == true)
                 {
-                    int selectIntMenuMax = listeEnnemis.Count;
+                    int selectIntMenuMax = listeMonstres.Count;
 
                     for(int i=1; i <= selectIntMenuMax; i++)
                     {
                         if(selectIntMenu == i)
                         {
-                            selectMenuActions3 = listeEnnemis[i - 1].Nom;
+                            selectMenuActions3 = listeMonstres[i - 1].Nom;
                         }
                     }
                     /*
                     if (selectIntMenu == 1)
                     {
-                        selectMenuActions3 = listeEnnemis[0].Nom;
+                        selectMenuActions3 = listeMonstres[0].Nom;
                     }
                     else if (selectIntMenu == 2)
                     {
-                        selectMenuActions3 = listeEnnemis[1].Nom;
+                        selectMenuActions3 = listeMonstres[1].Nom;
                     }
                     else if (selectIntMenu == 3)
                     {
-                        selectMenuActions3 = listeEnnemis[2].Nom;
+                        selectMenuActions3 = listeMonstres[2].Nom;
                     }
                     else if (selectIntMenu == 4)
                     {
-                        selectMenuActions3 = listeEnnemis[3].Nom;
+                        selectMenuActions3 = listeMonstres[3].Nom;
                     }
                     else if (selectIntMenu == 5)
                     {
-                        selectMenuActions3 = listeEnnemis[4].Nom;
+                        selectMenuActions3 = listeMonstres[4].Nom;
                     }
                     else if (selectIntMenu == 6)
                     {
-                        selectMenuActions3 = listeEnnemis[5].Nom;
+                        selectMenuActions3 = listeMonstres[5].Nom;
                     }
                     else if (selectIntMenu == 7)
                     {
-                        selectMenuActions3 = listeEnnemis[6].Nom;
+                        selectMenuActions3 = listeMonstres[6].Nom;
                     }
                     */
 
 
                     for(int i=0; i< selectIntMenuMax; i++)
                     {
-                        if (selectMenuActions3 == listeEnnemis[i].Nom)
+                        if (selectMenuActions3 == listeMonstres[i].Nom)
                         {
 
-                            listePictureBoxEnnemi[i].BackColor = Color.DimGray;
-                            listeLabelEnnemi[i].Text = "> " + listeEnnemis[i].Nom;
+                            listePictureBoxMonstre[i].BackColor = Color.DimGray;
+                            listeLabelMonstre[i].Text = "> " + listeMonstres[i].Nom;
                         }
                         else
                         {
-                            listePictureBoxEnnemi[i].BackColor = Color.Transparent;
-                            listeLabelEnnemi[i].Text = listeEnnemis[i].Nom;
+                            listePictureBoxMonstre[i].BackColor = Color.Transparent;
+                            listeLabelMonstre[i].Text = listeMonstres[i].Nom;
                         }
                     }
 
-                    for(int j= listeEnnemis.Count; j<listeLabelEnnemi.Count; j++)
+                    for(int j= listeMonstres.Count; j<listeLabelMonstre.Count; j++)
                     {
-                        listeLabelEnnemi[j].Text = "";
+                        listeLabelMonstre[j].Text = "";
                     }
 
                     /*
-                    if (selectMenuActions3 == listeEnnemis[0].Nom)
+                    if (selectMenuActions3 == listeMonstres[0].Nom)
                     {
 
-                        listeLabelEnnemi[0].Text = "> " + listeEnnemis[0].Nom;
+                        listeLabelMonstre[0].Text = "> " + listeMonstres[0].Nom;
                     }
                     else
                     {
-                        listeLabelEnnemi[0].Text = listeEnnemis[0].Nom;
+                        listeLabelMonstre[0].Text = listeMonstres[0].Nom;
                     }
 
-                    if (selectMenuActions3 == listeEnnemis[1].Nom)
+                    if (selectMenuActions3 == listeMonstres[1].Nom)
                     {
 
-                        listeLabelEnnemi[1].Text = "> " + listeEnnemis[1].Nom;
+                        listeLabelMonstre[1].Text = "> " + listeMonstres[1].Nom;
                     }
                     else
                     {
-                        listeLabelEnnemi[1].Text = listeEnnemis[1].Nom;
+                        listeLabelMonstre[1].Text = listeMonstres[1].Nom;
                     }
 
                     */
                     if (selectIntMenu <= 0)
                     {
-                        selectIntMenu = listeEnnemis.Count;
+                        selectIntMenu = listeMonstres.Count;
                     }
-                    else if (selectIntMenu >= listeEnnemis.Count+1)
+                    else if (selectIntMenu >= listeMonstres.Count+1)
                     {
                         selectIntMenu = 1;
                     }
@@ -577,8 +577,8 @@ namespace RPGProto
                         }
                         else if (selectMenuActions2 == "attaquer")
                         {
-                            pnEnnemi.Visible = true;
-                            tpnEnnemi.Visible = true;
+                            pnMonstre.Visible = true;
+                            tpnMonstre.Visible = true;
                             activeSelectMenu2 = false;
                             activeSelectMenu3 = true;
 
@@ -587,17 +587,17 @@ namespace RPGProto
 
                     if (activeSelectMenu3 == true)
                     {
-                        // Parcours des ennemis
-                        for (int i = 0; i < listeEnnemis.Count; i++)
+                        // Parcours des Monstres
+                        for (int i = 0; i < listeMonstres.Count; i++)
                         {
-                            if (selectMenuActions3 == listeEnnemis[i].Nom)
+                            if (selectMenuActions3 == listeMonstres[i].Nom)
                             {
                                 if (joueur.SonTour == true)
                                 {
-                                   // joueur.AttaquePhysique(listeEnnemis[i]);
+                                   // joueur.AttaquePhysique(listeMonstres[i]);
 
                                    // Memorise l'action du joueur
-                                    joueur.ListeActions.Add("attaqueP", listeEnnemis[i].Nom);
+                                    joueur.ListeActions.Add("attaqueP", listeMonstres[i].Nom);
                                     Console.WriteLine("Le joueur "+joueur.Nom+" prévoit une attaque physique");
                                    
                                     // Passe son tour
@@ -613,8 +613,8 @@ namespace RPGProto
                                     activeSelectMenu3 = false;
 
                                     pnCombattre.Visible = false;
-                                    pnEnnemi.Visible = false;
-                                    tpnEnnemi.Visible = false;
+                                    pnMonstre.Visible = false;
+                                    tpnMonstre.Visible = false;
                                     selectMenuActions2 = "";
                                     selectMenuActions1 = "";
                                     selectMenuActions3 = "";
@@ -626,17 +626,17 @@ namespace RPGProto
                                     for(int y=0; y < listeHeros.Count;y++){
                                         if(listeHeros[y].SonTour == true)
                                         {
-                                            // listeHeros[y].AttaquePhysique(listeEnnemis[i]);
+                                            // listeHeros[y].AttaquePhysique(listeMonstres[i]);
                                             // mémorise l'action du héros
-                                            listeHeros[y].ListeActions.Add("attaque", listeEnnemis[i].Nom);
+                                            listeHeros[y].ListeActions.Add("attaque", listeMonstres[i].Nom);
                                             Console.WriteLine("Le joueur " + listeHeros[y].Nom + " prévoit une attaque physique");
 
                                             // Passe son tour
                                             // avec 1 heros
                                             if (listeHeros.Count == 1)
                                             {
-                                                // passe le tour aux ennemis
-                                                Console.WriteLine("Passe tour aux ennemis");
+                                                // passe le tour aux Monstres
+                                                Console.WriteLine("Passe tour aux Monstres");
                                             }
                                             // avec 2 heros
                                             else if (listeHeros.Count == 2)
@@ -648,8 +648,8 @@ namespace RPGProto
                                                 }
                                                 else if(y == 1)
                                                 {
-                                                    // passe le tour aux ennemis
-                                                    Console.WriteLine("Passe tour aux ennemis");
+                                                    // passe le tour aux Monstres
+                                                    Console.WriteLine("Passe tour aux Monstres");
                                                 }
                                             }
 
@@ -669,8 +669,8 @@ namespace RPGProto
                                                 }
                                                 else if(y == 2)
                                                 {
-                                                    // passe le tour aux ennemis
-                                                    Console.WriteLine("Passe tour aux ennemis");
+                                                    // passe le tour aux Monstres
+                                                    Console.WriteLine("Passe tour aux Monstres");
                                                 }
                                             }
                                             listeHeros[y].SonTour = false;
@@ -684,8 +684,8 @@ namespace RPGProto
 
                                     pnActions.Visible = false;
                                     pnCombattre.Visible = false;
-                                    pnEnnemi.Visible = false;
-                                    tpnEnnemi.Visible = false;
+                                    pnMonstre.Visible = false;
+                                    tpnMonstre.Visible = false;
                                     selectMenuActions2 = "";
                                     selectMenuActions3 = "";
                                     selectMenuActions1 = "";
@@ -774,9 +774,10 @@ namespace RPGProto
         // Mise en place de l'IA
         void MemoriseActionIA()
         {
-            foreach(Ennemi unEnnemi in listeEnnemis)
+            Random rnd = new Random();
+            foreach (Monstre unMonstre in listeMonstres)
             {
-                unEnnemi.ListeActions.Add("attaque",listeHeros)
+                unMonstre.ListeActions.Add("attaque")
             }
         }
     }

@@ -142,11 +142,11 @@ namespace RPGProto
                 }
             }
         }
-        public void AttaquePhysique(Ennemi unEnnemi)
+        public void AttaquePhysique(Monstre unMonstre)
         {
-            int pointAttaque = force - unEnnemi.Defense;
-            unEnnemi.Vie -= pointAttaque;
-            Console.WriteLine("L'ennemi "+unEnnemi.Nom+" perd "+pointAttaque+" de damage.");
+            int pointAttaque = force - unMonstre.Defense;
+            unMonstre.Vie -= pointAttaque;
+            Console.WriteLine("L'Monstre "+unMonstre.Nom+" perd "+pointAttaque+" de damage.");
         }
     }
 }
