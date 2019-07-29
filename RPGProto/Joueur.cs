@@ -91,11 +91,5 @@ namespace RPGProto
                 }
             }
         }
-        public void AttaquePhysique(Monstre unMonstre)
-        {
-            int pointAttaque = this.Force - unMonstre.Defense;
-            unMonstre.Vie -= pointAttaque;
-            Console.WriteLine("L'Monstre "+unMonstre.Nom+" perd "+pointAttaque+" de damage.");
-        }
     }
 }

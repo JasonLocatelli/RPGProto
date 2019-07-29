@@ -777,7 +777,7 @@ namespace RPGProto
             Random rnd = new Random();
             foreach (Monstre unMonstre in listeMonstres)
             {
-                unMonstre.ListeActions.Add("attaque")
+               // unMonstre.ListeActions.Add("attaque")
             }
         }
     }

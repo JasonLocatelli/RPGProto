@@ -41,6 +41,13 @@ namespace RPGProto
             listeActions = new Dictionary<string, string>();
         }
 
+        public void AttaquePhysique(Personnage unPersonnage)
+        {
+            int pointAttaque = this.Force - unPersonnage.Defense;
+            unPersonnage.Vie -= pointAttaque;
+            Console.WriteLine("L'Monstre " + unPersonnage.Nom + " perd " + pointAttaque + " de damage.");
+        }
+
         public string Nom
         {
             get
