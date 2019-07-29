@@ -29,7 +29,7 @@ namespace RPGProto
         bool pause;
 
         List<Heros> listeHeros = new List<Heros>();
-        List<Ennemi> listeEnnemis = new List<Ennemi>();
+        List<Monstre> listeMonstres = new List<Monstre>();
         PictureBox spriteJoueur;
         Map map;
 
@@ -72,9 +72,9 @@ namespace RPGProto
             {
                 axWindowsMediaPlayerJeu.Ctlcontrols.pause();
                 Console.WriteLine("Vous avez "+listeHeros.Capacity+" heros à votre compagnie");
-                Console.WriteLine("Vous avez " + listeEnnemis.Capacity + " qui vous attaque");
+                Console.WriteLine("Vous avez " + listeMonstres.Capacity + " qui vous attaque");
                 Console.WriteLine(joueur.Nom);
-                Form combat = new Combat(1,joueur, listeHeros,listeEnnemis);
+                Form combat = new Combat(1,joueur, listeHeros,listeMonstres);
                 
                 joueur.SonTour = true;
                 this.Hide();
@@ -127,40 +127,40 @@ namespace RPGProto
             elfe.Nom = "Alferd";
             elfe.IconeCombat = @"\Icons\archer.png";
 
-            // Ajout d'ennemis
-            Ennemi ennemi = new Ennemi("orc", 16, 16, 1, 2, @"Player\test.png");
-            ennemi.Vie = 100;
-            ennemi.MaxVie = 100;
-            ennemi.Niveau = 100;
-            ennemi.Defense = 30;
-            ennemi.Force = 4;
-            ennemi.Agilite = 2;
-            ennemi.Dexterite = 6;
-            ennemi.Nom = "Alferd";
+            // Ajout d'Monstres
+            Monstre Monstre = new Monstre("orc", 16, 16, 1, 2, @"Player\test.png");
+            Monstre.Vie = 100;
+            Monstre.MaxVie = 100;
+            Monstre.Niveau = 100;
+            Monstre.Defense = 30;
+            Monstre.Force = 4;
+            Monstre.Agilite = 2;
+            Monstre.Dexterite = 6;
+            Monstre.Nom = "Alferd";
 
-            Ennemi ennemi2 = new Ennemi("poisson", 16, 16, 1, 2, @"Player\test.png");
-            ennemi2.Vie = 100;
-            ennemi2.MaxVie = 100;
-            ennemi2.Niveau = 100;
-            ennemi2.Nom = "Abrakadastrak";
+            Monstre Monstre2 = new Monstre("poisson", 16, 16, 1, 2, @"Player\test.png");
+            Monstre2.Vie = 100;
+            Monstre2.MaxVie = 100;
+            Monstre2.Niveau = 100;
+            Monstre2.Nom = "Abrakadastrak";
 
-            // Ajout d'ennemis
-            Ennemi ennemi3 = new Ennemi("orc", 16, 16, 1, 2, @"Player\test.png");
-            ennemi3.Vie = 100;
-            ennemi3.MaxVie = 100;
-            ennemi3.Niveau = 100;
-            ennemi3.Nom = "Alferd";
+            // Ajout d'Monstres
+            Monstre Monstre3 = new Monstre("orc", 16, 16, 1, 2, @"Player\test.png");
+            Monstre3.Vie = 100;
+            Monstre3.MaxVie = 100;
+            Monstre3.Niveau = 100;
+            Monstre3.Nom = "Alferd";
 
             joueur.IconeCombat = @"\Icons\knight.png";
       
             listeHeros.Add(elfe);
             Console.WriteLine("Un "+elfe.Nom+"a été ajouté");
             Console.WriteLine("Maintenant"+listeHeros.Count);
-            listeEnnemis.Add(ennemi);
-            listeEnnemis.Add(ennemi2);
-            listeEnnemis.Add(ennemi3);
+            listeMonstres.Add(Monstre);
+            listeMonstres.Add(Monstre2);
+            listeMonstres.Add(Monstre3);
             this.Controls.Add(joueur.SpriteBox);
-            this.Controls.Add(ennemi.SpriteBox);
+            this.Controls.Add(Monstre.SpriteBox);
             
             //this.Controls.Add(spriteJoueur);
 

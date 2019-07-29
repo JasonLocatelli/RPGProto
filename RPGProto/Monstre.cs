@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace RPGProto
 {
-    public class Ennemi : Sprite
+    public class Monstre : Sprite
     {
         private string nom;
         private string villeNatale;
@@ -36,7 +36,7 @@ namespace RPGProto
 
         private List<Objet> inventaire;
 
-        public Ennemi(string nomSprite, int width, int height, int x, int y, string path) : base(nomSprite, width, height, x, y, path)
+        public Monstre(string nomSprite, int width, int height, int x, int y, string path) : base(nomSprite, width, height, x, y, path)
         {
             equipements = new List<Objet>();
             listeActions = new Dictionary<string, string>();

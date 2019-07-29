@@ -587,6 +587,7 @@ namespace RPGProto
 
                     if (activeSelectMenu3 == true)
                     {
+                        // Parcours des ennemis
                         for (int i = 0; i < listeEnnemis.Count; i++)
                         {
                             if (selectMenuActions3 == listeEnnemis[i].Nom)
@@ -595,9 +596,10 @@ namespace RPGProto
                                 {
                                    // joueur.AttaquePhysique(listeEnnemis[i]);
 
-                                   // memorise l'action du joueur
-                                    joueur.ListeActions.Add("attaque", listeEnnemis[i].Nom);
-
+                                   // Memorise l'action du joueur
+                                    joueur.ListeActions.Add("attaqueP", listeEnnemis[i].Nom);
+                                    Console.WriteLine("Le joueur "+joueur.Nom+" prévoit une attaque physique");
+                                   
                                     // Passe son tour
                                     if(listeHeros.Count > 0)
                                     {
@@ -627,10 +629,11 @@ namespace RPGProto
                                             // listeHeros[y].AttaquePhysique(listeEnnemis[i]);
                                             // mémorise l'action du héros
                                             listeHeros[y].ListeActions.Add("attaque", listeEnnemis[i].Nom);
+                                            Console.WriteLine("Le joueur " + listeHeros[y].Nom + " prévoit une attaque physique");
 
                                             // Passe son tour
                                             // avec 1 heros
-                                            if(listeHeros.Count == 1)
+                                            if (listeHeros.Count == 1)
                                             {
                                                 // passe le tour aux ennemis
                                                 Console.WriteLine("Passe tour aux ennemis");
@@ -675,10 +678,11 @@ namespace RPGProto
                                     }
                                 
                                     // controle menu attaquer
-                                    activeSelectMenu1 = true;
+                                    activeSelectMenu1 = false;
                                     activeSelectMenu2 = false;
                                     activeSelectMenu3 = false;
 
+                                    pnActions.Visible = false;
                                     pnCombattre.Visible = false;
                                     pnEnnemi.Visible = false;
                                     tpnEnnemi.Visible = false;
@@ -694,6 +698,7 @@ namespace RPGProto
 
             }
 
+            // Controle de l'interface
             if (combat == true || actionsJoueur == true)
             {
                 if (e.KeyCode == Keys.Down)
@@ -764,6 +769,15 @@ namespace RPGProto
                 }
             }
 
+        }
+
+        // Mise en place de l'IA
+        void MemoriseActionIA()
+        {
+            foreach(Ennemi unEnnemi in listeEnnemis)
+            {
+                unEnnemi.ListeActions.Add("attaque",listeHeros)
+            }
         }
     }
 }

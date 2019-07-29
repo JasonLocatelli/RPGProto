@@ -187,11 +187,11 @@ namespace RPGProto
         public int Experience { get => experience; set => experience = value; }
         public Dictionary<string, string> ListeActions { get => listeActions; set => listeActions = value; }
 
-        public void AttaquePhysique(Ennemi unEnnemi)
+        public void AttaquePhysique(Monstre unMonstre)
         {
-            int pointAttaque = force - unEnnemi.Defense;
-            unEnnemi.Vie -= pointAttaque;
-            Console.WriteLine("L'ennemi " + unEnnemi.Nom + " perd " + pointAttaque + " de damage.");
+            int pointAttaque = force - unMonstre.Defense;
+            unMonstre.Vie -= pointAttaque;
+            Console.WriteLine("L'Monstre " + unMonstre.Nom + " perd " + pointAttaque + " de damage.");
         }
     }
 }
