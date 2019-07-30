@@ -28,7 +28,7 @@ namespace RPGProto
 
         bool pause;
 
-        List<Heros> listeHeros = new List<Heros>();
+        List<Personnage> listeEquipe = new List<Personnage>();
         List<Monstre> listeMonstres = new List<Monstre>();
         PictureBox spriteJoueur;
         Map map;
@@ -71,10 +71,10 @@ namespace RPGProto
             if (nbLanceCombat == 5)
             {
                 axWindowsMediaPlayerJeu.Ctlcontrols.pause();
-                Console.WriteLine("Vous avez "+listeHeros.Capacity+" heros à votre compagnie");
+                Console.WriteLine("Vous avez "+listeEquipe.Capacity+" heros à votre compagnie");
                 Console.WriteLine("Vous avez " + listeMonstres.Capacity + " qui vous attaque");
                 Console.WriteLine(joueur.Nom);
-                Form combat = new Combat(1,joueur, listeHeros,listeMonstres);
+                Form combat = new Combat(1,joueur, listeEquipe,listeMonstres);
                 
                 joueur.SonTour = true;
                 this.Hide();
@@ -114,7 +114,8 @@ namespace RPGProto
             joueur.Force = 50;
             joueur.Agilite = 50;
             joueur.Dexterite = 50;
-            
+            joueur.IconeCombat = @"\Icons\knight.png";
+
             // Ajout d'un hero
             Elfe elfe = new Elfe("elfe", 16, 16, 1, 1, @"Player\test.png");
             elfe.Vie = 70;
@@ -152,10 +153,15 @@ namespace RPGProto
             Monstre3.Nom = "Alferd";
 
             joueur.IconeCombat = @"\Icons\knight.png";
-      
-            listeHeros.Add(elfe);
-            Console.WriteLine("Un "+elfe.Nom+"a été ajouté");
-            Console.WriteLine("Maintenant"+listeHeros.Count);
+
+            // Ajout du joueur dans l'équipe
+            listeEquipe.Add(joueur);
+            Console.WriteLine("le joueur "+joueur.Nom+"a été ajouté");
+
+            // Ajout de l'elfe dans l'équipe
+            listeEquipe.Add(elfe);
+            Console.WriteLine("Un "+elfe.Nom+"a été ajouté.");
+            Console.WriteLine("Vous êtes "+listeEquipe.Count+"dans l'équipe.");
             listeMonstres.Add(Monstre);
             listeMonstres.Add(Monstre2);
             listeMonstres.Add(Monstre3);

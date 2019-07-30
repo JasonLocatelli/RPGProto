@@ -25,9 +25,12 @@ namespace RPGProto
         private int counter = 1;
         int compteurCara;
 
+        // Liste de l'équipe du joueur
         List<Personnage> listeEquipe = new List<Personnage>();
         
+        // Liste de l'équipe adverse
         List<Monstre> listeMonstres = new List<Monstre>();
+       
         List<Label> listeLabelMonstre = new List<Label>();
         List<string> listeNomMonstres = new List<string>();
         List<PictureBox> listePictureBoxMonstre = new List<PictureBox>();
@@ -139,7 +142,7 @@ namespace RPGProto
                 listePictureBoxMonstre[i].Visible = true;
             }
 
-            foreach (Heros unHero in listeEquipe)
+            foreach (Personnage unHero in listeEquipe)
             {
                 Console.WriteLine(unHero.Nom+" vous aide dans le combat");
                 lbHerosName2.Text = unHero.Nom;
@@ -170,19 +173,19 @@ namespace RPGProto
            
             //tlpMonstres.Controls.Add(pbMonstre1, rnd.Next(tlpMonstres.ColumnCount), 0);
 
-            if (listeEquipe.Count == 0)
+            if (listeEquipe.Count == 1)
             {
                 pnHeros2.Visible = false;
                 pnHeros3.Visible = false;
                 pnHeros4.Visible = false;
             }
-            if (listeEquipe.Count == 1)
+            if (listeEquipe.Count == 2)
             {
                 pnHeros3.Visible = false;
                 pnHeros4.Visible = false;
             }
 
-            if (listeEquipe.Count == 2)
+            if (listeEquipe.Count == 3)
             {
                 pnHeros4.Visible = false;
             }
@@ -509,7 +512,7 @@ namespace RPGProto
                     {
                         pnHeros1.BackColor = Color.Black;
 
-                        foreach (Heros unHero in listeEquipe)
+                        foreach (Personnage unHero in listeEquipe)
                         {
                             foreach (Panel unPanelHero in listePanelEquipe)
                             {
