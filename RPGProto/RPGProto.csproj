@@ -146,7 +146,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Sprites\Ennemis\orc1.png" />
+    <None Include="bin\Sprites\Monstres\orc1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Icons\archer.jpg" />

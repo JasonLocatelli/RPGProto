@@ -192,6 +192,7 @@ namespace RPGProto
         public bool SonTour { get => sonTour; set => sonTour = value; }
         public int Experience { get => experience; set => experience = value; }
         public Dictionary<string, string> ListeActions { get => listeActions; set => listeActions = value; }
-
+        public string Race { get => race; set => race = value; }
+        public string Classe { get => classe; set => classe = value; }
     }
 }
