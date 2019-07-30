@@ -25,13 +25,13 @@ namespace RPGProto
         private int counter = 1;
         int compteurCara;
 
-        List<Heros> listeHeros = new List<Heros>();
-        List<Heros> listeEquipe = new List<Heros>();
+        List<Personnage> listeEquipe = new List<Personnage>();
+        
         List<Monstre> listeMonstres = new List<Monstre>();
         List<Label> listeLabelMonstre = new List<Label>();
         List<string> listeNomMonstres = new List<string>();
         List<PictureBox> listePictureBoxMonstre = new List<PictureBox>();
-        List<Panel> listePanelHeros = new List<Panel>();
+        List<Panel> listePanelEquipe = new List<Panel>();
         List<char> listeLettres = new List<char>();
         List<char> cara = new List<char>();
 
@@ -52,7 +52,7 @@ namespace RPGProto
 
         private bool selectionner = false;
         int compteur;
-        public Combat(int zone,Joueur joueur, List<Heros> listeHeros, List<Monstre> listeMonstres)
+        public Combat(int zone,Joueur joueur, List<Personnage> listeEquipe, List<Monstre> listeMonstres)
         {
             InitializeComponent();
 
@@ -67,7 +67,7 @@ namespace RPGProto
             timerCombat.Start();
             
             this.joueur = joueur;
-            this.listeHeros = listeHeros;
+            this.listeEquipe = listeEquipe;
             this.listeMonstres = listeMonstres;
             str_directory = Environment.CurrentDirectory.ToString();
             parent = System.IO.Directory.GetParent(str_directory).FullName;
@@ -75,9 +75,9 @@ namespace RPGProto
             this.axWindowsMediaPlayerCombat.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(axWindowsMediaPlayerCombat_PlayStateChange);
             axWindowsMediaPlayerCombat.URL = parent + @"\Musics\battle.wav";
 
-            listePanelHeros.Add(pnHeros2);
-            listePanelHeros.Add(pnHeros3);
-            listePanelHeros.Add(pnHeros4);
+            listePanelEquipe.Add(pnHeros2);
+            listePanelEquipe.Add(pnHeros3);
+            listePanelEquipe.Add(pnHeros4);
 
             listePictureBoxMonstre.Add(pbMonstre1);
             listePictureBoxMonstre.Add(pbMonstre2);
@@ -139,7 +139,7 @@ namespace RPGProto
                 listePictureBoxMonstre[i].Visible = true;
             }
 
-            foreach (Heros unHero in listeHeros)
+            foreach (Heros unHero in listeEquipe)
             {
                 Console.WriteLine(unHero.Nom+" vous aide dans le combat");
                 lbHerosName2.Text = unHero.Nom;
@@ -164,25 +164,25 @@ namespace RPGProto
             lbAfficheHPheros1.Text = Convert.ToString(joueur.Vie)+" / "+Convert.ToString(joueur.MaxVie);
             lbAfficheMPheros1.Text = Convert.ToString(joueur.PointSort) + " / " + Convert.ToString(joueur.MaxMP);
             lbAfficheLVLheros1.Text = Convert.ToString(joueur.Niveau);
-            //listeHeros[0].SonTour = true;
+            //listeEquipe[0].SonTour = true;
             joueur.SonTour = true;
             
            
             //tlpMonstres.Controls.Add(pbMonstre1, rnd.Next(tlpMonstres.ColumnCount), 0);
 
-            if (listeHeros.Count == 0)
+            if (listeEquipe.Count == 0)
             {
                 pnHeros2.Visible = false;
                 pnHeros3.Visible = false;
                 pnHeros4.Visible = false;
             }
-            if (listeHeros.Count == 1)
+            if (listeEquipe.Count == 1)
             {
                 pnHeros3.Visible = false;
                 pnHeros4.Visible = false;
             }
 
-            if (listeHeros.Count == 2)
+            if (listeEquipe.Count == 2)
             {
                 pnHeros4.Visible = false;
             }
@@ -509,9 +509,9 @@ namespace RPGProto
                     {
                         pnHeros1.BackColor = Color.Black;
 
-                        foreach (Heros unHero in listeHeros)
+                        foreach (Heros unHero in listeEquipe)
                         {
-                            foreach (Panel unPanelHero in listePanelHeros)
+                            foreach (Panel unPanelHero in listePanelEquipe)
                             {
                                 if (unHero.SonTour)
                                 {
@@ -601,9 +601,9 @@ namespace RPGProto
                                     Console.WriteLine("Le joueur "+joueur.Nom+" prévoit une attaque physique");
                                    
                                     // Passe son tour
-                                    if(listeHeros.Count > 0)
+                                    if(listeEquipe.Count > 0)
                                     {
-                                        listeHeros[0].SonTour = true;
+                                        listeEquipe[0].SonTour = true;
                                     }
                                     joueur.SonTour = false;
 
@@ -623,28 +623,28 @@ namespace RPGProto
                                 else
                                 {
 
-                                    for(int y=0; y < listeHeros.Count;y++){
-                                        if(listeHeros[y].SonTour == true)
+                                    for(int y=0; y < listeEquipe.Count;y++){
+                                        if(listeEquipe[y].SonTour == true)
                                         {
-                                            // listeHeros[y].AttaquePhysique(listeMonstres[i]);
+                                            // listeEquipe[y].AttaquePhysique(listeMonstres[i]);
                                             // mémorise l'action du héros
-                                            listeHeros[y].ListeActions.Add("attaque", listeMonstres[i].Nom);
-                                            Console.WriteLine("Le joueur " + listeHeros[y].Nom + " prévoit une attaque physique");
+                                            listeEquipe[y].ListeActions.Add("attaque", listeMonstres[i].Nom);
+                                            Console.WriteLine("Le joueur " + listeEquipe[y].Nom + " prévoit une attaque physique");
 
                                             // Passe son tour
                                             // avec 1 heros
-                                            if (listeHeros.Count == 1)
+                                            if (listeEquipe.Count == 1)
                                             {
                                                 // passe le tour aux Monstres
                                                 Console.WriteLine("Passe tour aux Monstres");
                                             }
                                             // avec 2 heros
-                                            else if (listeHeros.Count == 2)
+                                            else if (listeEquipe.Count == 2)
                                             {
                                                 if(y == 0)
                                                 {
                                                     // passe le tour au heros suivant
-                                                    listeHeros[1].SonTour = true;
+                                                    listeEquipe[1].SonTour = true;
                                                 }
                                                 else if(y == 1)
                                                 {
@@ -654,17 +654,17 @@ namespace RPGProto
                                             }
 
                                             // avec 3 heros
-                                            else if (listeHeros.Count == 3)
+                                            else if (listeEquipe.Count == 3)
                                             {
                                                 if (y == 0)
                                                 {
                                                     // passe le tour au heros suivant
-                                                    listeHeros[1].SonTour = true;
+                                                    listeEquipe[1].SonTour = true;
                                                 }
                                                 else if (y == 1)
                                                 {
                                                     // passe le tour au heros suivant
-                                                    listeHeros[2].SonTour = true;
+                                                    listeEquipe[2].SonTour = true;
 
                                                 }
                                                 else if(y == 2)
@@ -673,7 +673,7 @@ namespace RPGProto
                                                     Console.WriteLine("Passe tour aux Monstres");
                                                 }
                                             }
-                                            listeHeros[y].SonTour = false;
+                                            listeEquipe[y].SonTour = false;
                                         }
                                     }
                                 
