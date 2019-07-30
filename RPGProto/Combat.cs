@@ -162,7 +162,7 @@ namespace RPGProto
         {
             Control grillLayout = tlpHeros.GetControlFromPosition(5, 0);
             lbHerosName1.Text = joueur.Nom;
-            pbHeros1.Image = RPGProto.Properties.Resources.knight1;
+            pbHeros1.Image = joueur.IconeCombat;
             Console.WriteLine(pbHeros1.ImageLocation);
             lbAfficheHPheros1.Text = Convert.ToString(joueur.Vie)+" / "+Convert.ToString(joueur.MaxVie);
             lbAfficheMPheros1.Text = Convert.ToString(joueur.PointSort) + " / " + Convert.ToString(joueur.MaxMP);

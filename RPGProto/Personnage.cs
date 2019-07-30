@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace RPGProto
 {
@@ -11,7 +12,7 @@ namespace RPGProto
         private string nom;
         private string villeNatale;
         private DateTime dateNaissance;
-        private string iconeCombat;
+        private Image iconeCombat;
 
         private string race;
         private string classe;
@@ -185,7 +186,7 @@ namespace RPGProto
             }
         }
 
-        public string IconeCombat { get => iconeCombat; set => iconeCombat = value; }
+        public Image IconeCombat { get => iconeCombat; set => iconeCombat = value; }
         public int PointSort { get => pointSort; set => pointSort = value; }
         public int MaxVie { get => maxVie; set => maxVie = value; }
         public int MaxMP { get => maxMP; set => maxMP = value; }
