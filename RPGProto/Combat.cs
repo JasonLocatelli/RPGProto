@@ -144,9 +144,9 @@ namespace RPGProto
 
             foreach (Personnage unHero in listeEquipe)
             {
-                Console.WriteLine(unHero.Nom+" vous aide dans le combat");
+                Console.WriteLine("Votre équipe est consitué de"+listeEquipe.Count);
                 lbHerosName2.Text = unHero.Nom;
-                pbHeros2.Image = RPGProto.Properties.Resources.archer;
+                pbHeros2.Image = Image.FromFile(parent + "\\Icons\\" + unHero.IconeCombat);
                 lbAfficheHPheros2.Text = Convert.ToString(unHero.Vie) + " / " + Convert.ToString(unHero.MaxVie);
                 lbAfficheMPheros2.Text = Convert.ToString(unHero.PointSort) + " / " + Convert.ToString(unHero.MaxMP);
                 lbAfficheLVLheros2.Text = Convert.ToString(unHero.Niveau);
@@ -162,7 +162,8 @@ namespace RPGProto
         {
             Control grillLayout = tlpHeros.GetControlFromPosition(5, 0);
             lbHerosName1.Text = joueur.Nom;
-            pbHeros1.Image = joueur.IconeCombat;
+            pbHeros1.Image = Image.FromFile(parent+"\\Icons\\"+joueur.IconeCombat);
+           
             Console.WriteLine(pbHeros1.ImageLocation);
             lbAfficheHPheros1.Text = Convert.ToString(joueur.Vie)+" / "+Convert.ToString(joueur.MaxVie);
             lbAfficheMPheros1.Text = Convert.ToString(joueur.PointSort) + " / " + Convert.ToString(joueur.MaxMP);
@@ -595,6 +596,10 @@ namespace RPGProto
                         {
                             if (selectMenuActions3 == listeMonstres[i].Nom)
                             {
+                                foreach(Personnage unHero in listeEquipe)
+                                {
+
+                                }
                                 if (joueur.SonTour == true)
                                 {
                                    // joueur.AttaquePhysique(listeMonstres[i]);

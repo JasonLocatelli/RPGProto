@@ -114,7 +114,7 @@ namespace RPGProto
             joueur.Force = 50;
             joueur.Agilite = 50;
             joueur.Dexterite = 50;
-            joueur.IconeCombat = @"\Icons\knight.png";
+            joueur.IconeCombat = "knight.jpg";
 
             // Ajout d'un hero
             Elfe elfe = new Elfe("elfe", 16, 16, 1, 1, @"Player\test.png");
@@ -126,7 +126,7 @@ namespace RPGProto
             elfe.Agilite = 70;
             elfe.Dexterite = 40;
             elfe.Nom = "Alferd";
-            elfe.IconeCombat = @"\Icons\archer.png";
+            elfe.IconeCombat = "archer.png";
 
             // Ajout d'Monstres
             Monstre Monstre = new Monstre("orc", 16, 16, 1, 2, @"Player\test.png");
@@ -151,8 +151,6 @@ namespace RPGProto
             Monstre3.MaxVie = 100;
             Monstre3.Niveau = 100;
             Monstre3.Nom = "Alferd";
-
-            joueur.IconeCombat = @"\Icons\knight.png";
 
             // Ajout du joueur dans l'équipe
             listeEquipe.Add(joueur);

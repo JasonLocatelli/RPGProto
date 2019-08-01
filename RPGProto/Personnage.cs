@@ -12,7 +12,7 @@ namespace RPGProto
         private string nom;
         private string villeNatale;
         private DateTime dateNaissance;
-        private Image iconeCombat;
+        private string iconeCombat;
 
         private string race;
         private string classe;
@@ -186,7 +186,7 @@ namespace RPGProto
             }
         }
 
-        public Image IconeCombat { get => iconeCombat; set => iconeCombat = value; }
+        public string IconeCombat { get => iconeCombat; set => iconeCombat = value; }
         public int PointSort { get => pointSort; set => pointSort = value; }
         public int MaxVie { get => maxVie; set => maxVie = value; }
         public int MaxMP { get => maxMP; set => maxMP = value; }
