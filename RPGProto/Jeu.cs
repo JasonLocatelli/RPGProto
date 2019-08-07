@@ -126,7 +126,7 @@ namespace RPGProto
             elfe.Agilite = 70;
             elfe.Dexterite = 40;
             elfe.Nom = "Alferd";
-            elfe.IconeCombat = "archer.png";
+            elfe.IconeCombat = "archer.jpg";
 
             // Ajout d'Monstres
             Monstre Monstre = new Monstre("orc", 16, 16, 1, 2, @"Player\test.png");

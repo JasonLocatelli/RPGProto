@@ -35,6 +35,8 @@ namespace RPGProto
         List<string> listeNomMonstres = new List<string>();
         List<PictureBox> listePictureBoxMonstre = new List<PictureBox>();
         List<Panel> listePanelEquipe = new List<Panel>();
+        List<Label> listeAfficheEquipeHP = new List<Label>();
+        List<Label> listeAfficheEquipeMP = new List<Label>();
         List<char> listeLettres = new List<char>();
         List<char> cara = new List<char>();
 
@@ -78,6 +80,7 @@ namespace RPGProto
             this.axWindowsMediaPlayerCombat.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(axWindowsMediaPlayerCombat_PlayStateChange);
             axWindowsMediaPlayerCombat.URL = parent + @"\Musics\battle.wav";
 
+            listePanelEquipe.Add(pnHeros1);
             listePanelEquipe.Add(pnHeros2);
             listePanelEquipe.Add(pnHeros3);
             listePanelEquipe.Add(pnHeros4);
@@ -146,7 +149,7 @@ namespace RPGProto
             {
                 Console.WriteLine("Votre équipe est consitué de"+listeEquipe.Count);
                 lbHerosName2.Text = unHero.Nom;
-                pbHeros2.Image = Image.FromFile(parent + "\\Icons\\" + unHero.IconeCombat);
+                pbHeros2.Image = Image.FromFile(parent+"\\Icons\\" + unHero.IconeCombat);
                 lbAfficheHPheros2.Text = Convert.ToString(unHero.Vie) + " / " + Convert.ToString(unHero.MaxVie);
                 lbAfficheMPheros2.Text = Convert.ToString(unHero.PointSort) + " / " + Convert.ToString(unHero.MaxMP);
                 lbAfficheLVLheros2.Text = Convert.ToString(unHero.Niveau);
