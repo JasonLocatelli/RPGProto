@@ -111,46 +111,57 @@ namespace RPGProto
             joueur.Vie = 100;
             joueur.MaxVie = 100;
             joueur.Niveau = 100;
-            joueur.Force = 50;
+            joueur.PuissanceAttaque = 10;
+            joueur.Force = 10;
             joueur.Agilite = 50;
-            joueur.Dexterite = 50;
+            joueur.Dexterite = 10;
             joueur.IconeCombat = "knight.jpg";
 
             // Ajout d'un hero
             Elfe elfe = new Elfe("elfe", 16, 16, 1, 1, @"Player\test.png");
-            elfe.Vie = 70;
+            elfe.Vie = 10;
             elfe.MaxVie = 70;
-            elfe.Niveau = 100;
-            elfe.Defense = 10;
+            elfe.Niveau = 50;
+            elfe.Defense = 2;
             elfe.Force = 20;
+            elfe.PuissanceAttaque = 20;
             elfe.Agilite = 70;
             elfe.Dexterite = 40;
-            elfe.Nom = "Alferd";
+            elfe.Nom = "John";
             elfe.IconeCombat = "archer.jpg";
 
             // Ajout d'Monstres
             Monstre Monstre = new Monstre("orc", 16, 16, 1, 2, @"Player\test.png");
-            Monstre.Vie = 100;
+            Monstre.Vie = 10;
             Monstre.MaxVie = 100;
             Monstre.Niveau = 100;
-            Monstre.Defense = 30;
+            Monstre.Defense = 6;
             Monstre.Force = 4;
+            Monstre.PuissanceAttaque = 5;
             Monstre.Agilite = 2;
             Monstre.Dexterite = 6;
-            Monstre.Nom = "Alferd";
+            Monstre.Nom = "Goblin";
 
             Monstre Monstre2 = new Monstre("poisson", 16, 16, 1, 2, @"Player\test.png");
-            Monstre2.Vie = 100;
+            Monstre2.Vie = 10;
             Monstre2.MaxVie = 100;
             Monstre2.Niveau = 100;
-            Monstre2.Nom = "Abrakadastrak";
+            Monstre2.Defense = 2;
+            Monstre2.Force = 4;
+            Monstre2.Agilite = 20;
+            Monstre.Dexterite = 6;
+            Monstre2.Nom = "Goblin";
 
             // Ajout d'Monstres
             Monstre Monstre3 = new Monstre("orc", 16, 16, 1, 2, @"Player\test.png");
-            Monstre3.Vie = 100;
+            Monstre3.Vie = 10;
+            Monstre.Defense = 4;
             Monstre3.MaxVie = 100;
-            Monstre3.Niveau = 100;
-            Monstre3.Nom = "Alferd";
+            Monstre3.Force = 4;
+            Monstre3.PuissanceAttaque = 12;
+            Monstre3.Agilite = 10;
+            Monstre3.Dexterite = 6;
+            Monstre3.Nom = "Goblin";
 
             // Ajout du joueur dans l'équipe
             listeEquipe.Add(joueur);

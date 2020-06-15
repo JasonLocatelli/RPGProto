@@ -103,6 +103,7 @@
             this.lbMonstre3 = new System.Windows.Forms.Label();
             this.lbMonstre1 = new System.Windows.Forms.Label();
             this.lbMonstre2 = new System.Windows.Forms.Label();
+            this.timerSonsCombat = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayerCombat)).BeginInit();
             this.pnHeros1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHeros1)).BeginInit();
@@ -1018,7 +1019,7 @@
             this.lbMonstre7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMonstre7.Location = new System.Drawing.Point(3, 115);
             this.lbMonstre7.Name = "lbMonstre7";
-            this.lbMonstre7.Size = new System.Drawing.Size(63, 17);
+            this.lbMonstre7.Size = new System.Drawing.Size(67, 17);
             this.lbMonstre7.TabIndex = 15;
             this.lbMonstre7.Text = "Monstre7";
             this.lbMonstre7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1031,7 +1032,7 @@
             this.lbMonstre6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMonstre6.Location = new System.Drawing.Point(3, 95);
             this.lbMonstre6.Name = "lbMonstre6";
-            this.lbMonstre6.Size = new System.Drawing.Size(63, 17);
+            this.lbMonstre6.Size = new System.Drawing.Size(67, 17);
             this.lbMonstre6.TabIndex = 14;
             this.lbMonstre6.Text = "Monstre6";
             this.lbMonstre6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1044,7 +1045,7 @@
             this.lbMonstre5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMonstre5.Location = new System.Drawing.Point(3, 75);
             this.lbMonstre5.Name = "lbMonstre5";
-            this.lbMonstre5.Size = new System.Drawing.Size(63, 17);
+            this.lbMonstre5.Size = new System.Drawing.Size(67, 17);
             this.lbMonstre5.TabIndex = 13;
             this.lbMonstre5.Text = "Monstre5";
             this.lbMonstre5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1057,7 +1058,7 @@
             this.lbMonstre4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMonstre4.Location = new System.Drawing.Point(3, 55);
             this.lbMonstre4.Name = "lbMonstre4";
-            this.lbMonstre4.Size = new System.Drawing.Size(63, 17);
+            this.lbMonstre4.Size = new System.Drawing.Size(67, 17);
             this.lbMonstre4.TabIndex = 11;
             this.lbMonstre4.Text = "Monstre4";
             this.lbMonstre4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1070,7 +1071,7 @@
             this.lbMonstre3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMonstre3.Location = new System.Drawing.Point(3, 35);
             this.lbMonstre3.Name = "lbMonstre3";
-            this.lbMonstre3.Size = new System.Drawing.Size(63, 17);
+            this.lbMonstre3.Size = new System.Drawing.Size(67, 17);
             this.lbMonstre3.TabIndex = 11;
             this.lbMonstre3.Text = "Monstre3";
             this.lbMonstre3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1083,7 +1084,7 @@
             this.lbMonstre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMonstre1.Location = new System.Drawing.Point(3, 0);
             this.lbMonstre1.Name = "lbMonstre1";
-            this.lbMonstre1.Size = new System.Drawing.Size(63, 17);
+            this.lbMonstre1.Size = new System.Drawing.Size(67, 17);
             this.lbMonstre1.TabIndex = 12;
             this.lbMonstre1.Text = "Monstre1";
             this.lbMonstre1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1096,10 +1097,15 @@
             this.lbMonstre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMonstre2.Location = new System.Drawing.Point(3, 17);
             this.lbMonstre2.Name = "lbMonstre2";
-            this.lbMonstre2.Size = new System.Drawing.Size(63, 17);
+            this.lbMonstre2.Size = new System.Drawing.Size(67, 17);
             this.lbMonstre2.TabIndex = 0;
             this.lbMonstre2.Text = "Monstre2";
             this.lbMonstre2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // timerSonsCombat
+            // 
+            this.timerSonsCombat.Interval = 1000;
+            this.timerSonsCombat.Tick += new System.EventHandler(this.timerSonsCombat_Tick);
             // 
             // Combat
             // 
@@ -1232,5 +1238,6 @@
         public System.Windows.Forms.PictureBox pbMonstre4;
         public System.Windows.Forms.PictureBox pbMonstre3;
         public System.Windows.Forms.PictureBox pbMonstre2;
+        private System.Windows.Forms.Timer timerSonsCombat;
     }
 }

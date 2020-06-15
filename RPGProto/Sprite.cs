@@ -18,7 +18,10 @@ namespace RPGProto
         private int x;
         private int y;
 
+        public Sprite()
+        {
 
+        }
         public Sprite(string nomSprite,  int width, int height, int x, int y, string path)
         {
             str_directory = Environment.CurrentDirectory.ToString();

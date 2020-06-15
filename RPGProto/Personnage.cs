@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
-
 namespace RPGProto
 {
     public class Personnage : Sprite
@@ -17,6 +16,7 @@ namespace RPGProto
         private string race;
         private string classe;
         private bool sonTour;
+        private bool estMort;
         private Dictionary<string, string> listeActions;
         private int niveau;
         private int experience;
@@ -30,23 +30,52 @@ namespace RPGProto
 
         private List<Objet> equipements;
 
+        private string typePersonnage;
+        private int chanceCoupCritique;
+        private int puissanceAttaque;
         private int force;
         private int agilite;
         private int dexterite;
 
         private List<Objet> inventaire;
+
+        public Personnage()
+        {
+
+        }
+
         public Personnage(string nomSprite, int width, int height, int x, int y, string path) : base(nomSprite, width, height, x, y, path)
         {
             this.nom = nomSprite;
+            estMort = false;
             equipements = new List<Objet>();
             listeActions = new Dictionary<string, string>();
         }
 
-        public void AttaquePhysique(Personnage unPersonnage)
+        public int AttaqueNormal(Personnage unPersonnage)
         {
-            int pointAttaque = this.Force - unPersonnage.Defense;
-            unPersonnage.Vie -= pointAttaque;
-            Console.WriteLine("L'Monstre " + unPersonnage.Nom + " perd " + pointAttaque + " de damage.");
+            decimal puissance = puissanceAttaque - (unPersonnage.Defense/2);
+            int multiplicateur = 20 + force;
+            
+            chanceCoupCritique = 4 * dexterite / unPersonnage.Agilite;
+            Random rdn = new Random();
+            bool coupCritique = false;
+            int correctionCritique = 1;
+            int rand = rdn.Next(1, 100);
+            if (rand < chanceCoupCritique / 100)
+            {
+                coupCritique = true;
+            }
+
+            if (coupCritique)
+            {
+
+                correctionCritique = 2;
+            }
+            decimal degats = Math.Floor(puissance * multiplicateur / 20 * correctionCritique);
+            
+            Console.WriteLine(nom+" attaque "+unPersonnage.Nom + " perd " + degats + " de damage.");
+            return Convert.ToInt32(degats);
         }
 
         public string Nom
@@ -132,6 +161,18 @@ namespace RPGProto
                 force = value;
             }
         }
+        public int PuissanceAttaque
+        {
+            get
+            {
+                return puissanceAttaque;
+            }
+
+            set
+            {
+                puissanceAttaque = value;
+            }
+        }
 
         public int Agilite
         {
@@ -195,5 +236,7 @@ namespace RPGProto
         public Dictionary<string, string> ListeActions { get => listeActions; set => listeActions = value; }
         public string Race { get => race; set => race = value; }
         public string Classe { get => classe; set => classe = value; }
+        public bool EstMort { get => estMort; set => estMort = value; }
+        public string TypePersonnage { get => typePersonnage; set => typePersonnage = value; }
     }
 }
